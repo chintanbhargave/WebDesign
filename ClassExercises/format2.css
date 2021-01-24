@@ -1,0 +1,13 @@
+body {
+    background-color:yellow;
+    color : green;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    padding-top: 600px ;
+    text-align: center;
+}
