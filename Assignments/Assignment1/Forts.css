@@ -1,0 +1,42 @@
+
+  body {
+    background-image: url('Background.JPG');
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+  header {
+      font-size: 100px;
+      padding-left: 5%;
+      padding-top: 4%;
+      
+  }
+
+  nav {
+    margin-left: 60%;
+   
+  }
+  nav a {
+      padding-left: 10%;
+      text-decoration: none;
+      color: black;
+  }
+  
+  footer {
+    padding-top: 600px;
+    text-align: center;
+   
+}
+
+ footer a{
+    color: white;
+    text-decoration: none;
+}
+
+ .description {
+    vertical-align: middle;
+    margin: 15%;
+    text-align: center;
+    color:white;
+    font-size: 40px;
+}
