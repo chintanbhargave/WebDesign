@@ -1,0 +1,27 @@
+
+  header {
+    font-size: 100px;
+    padding-left: 5%;
+    padding-top: 4%;
+}
+
+nav {
+  margin-left: 60%;
+ 
+}
+nav a {
+    padding-left: 10%;
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    padding-top: 600px;
+    text-align: center;
+   
+}
+
+ footer a{
+    color: black;
+    text-decoration: none;
+}
