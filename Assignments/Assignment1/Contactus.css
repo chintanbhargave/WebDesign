@@ -1,5 +1,11 @@
 
-  .contact {
+body {
+    background-image: url('Suvarnadurga.JPG');
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+ .contact {
     font-size: 100px;
     padding-left: 5%;
     padding-top: 4%;
@@ -25,7 +31,7 @@ footer {
 }
 
 footer a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 

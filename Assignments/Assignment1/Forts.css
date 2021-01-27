@@ -3,29 +3,42 @@
     background-image: url('Background.JPG');
     background-attachment: fixed; 
     background-size: 100% 100%;
+    margin: auto;
   }
 
+  .com{
+    font-size: 15px;
+    color: white;
+  }
   .forts {
-      font-size: 100px;
-      padding-left: 5%;
+      background: color C 49393;
+      font-size: 80px;
+      text-align:left;
+      max-width: 100%;
+      padding-left: 4%;
       padding-top: 4%;
-      text-align: center;
-      
-  }
-
-  nav {
-    margin-top: 5%;
-    margin-left: 60%;
    
   }
-  nav a {
-      padding-left: 10%;
+
+  .nav {
+    margin-top: 0%;
+    margin-left: 65%;
+   
+  }
+  .nav a {
+      padding-left: 5%;
       text-decoration: none;
       color: black;
   }
   
+ .nav a:hover{
+    color: white;
+    border-bottom: 3px solid black;
+}
+
   footer {
-    padding-top: 600px;
+    background-color: green;
+    margin-top: 600px;
     text-align: center;
    
 }
@@ -37,8 +50,45 @@
 
  .description {
     vertical-align: middle;
-    margin: 15%;
+    margin-top: 10%;
     text-align: center;
     color:white;
     font-size: 40px;
 }
+
+.row {
+  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.row .col-4{
+    float: left;
+    border: 1px solid white;
+}
+
+.col-4 a:hover {
+  color: green;
+}
+
+.col-4 a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .des {
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+  .col-4 {
+    margin: 2%;
+    background-color: green;
+  }
+
+  .col-4 img {
+    height: 250px;
+    width: 250px;
+  } 
