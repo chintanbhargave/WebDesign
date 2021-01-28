@@ -1,94 +1,93 @@
 
-  body {
-    background-image: url('Background.JPG');
-    background-attachment: fixed; 
-    background-size: 100% 100%;
-    margin: auto;
+body {
+  background-image: url('Background.JPG');
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  margin: auto;
   }
 
-  .com{
+  /* Header */
+.com{
     font-size: 15px;
     color: white;
   }
-  .forts {
-      background: color C 49393;
-      font-size: 80px;
-      text-align:left;
-      max-width: 100%;
-      padding-left: 4%;
-      padding-top: 4%;
+.forts {
+    background: color C 49393;
+    font-size: 80px;
+    text-align:left;
+    max-width: 100%;
+    margin-left: 4%;
+    margin-top: 2%;
    
   }
-
+/* Navigation */
   .nav {
-    margin-top: 0%;
-    margin-left: 65%;
-   
+  margin-top: 0%;
+  margin-left: 71%;
   }
-  .nav a {
-      padding-left: 5%;
-      text-decoration: none;
-      color: black;
+
+.nav a {
+  margin-left: 5%;
+  text-decoration: none;
+  color: black;
   }
   
- .nav a:hover{
-    color: white;
-    border-bottom: 3px solid black;
+.nav a:hover{
+  color: white;
+  border-bottom: 2px solid black;
+}
+/* page description */
+.description {
+  vertical-align: middle;
+  margin-top: 10%;
+  text-align: center;
+  color:white;
+  font-size: 30px;
 }
 
-  footer {
-    background-color: green;
-    margin-top: 600px;
-    text-align: center;
-   
-}
-
- footer a{
-    color: white;
-    text-decoration: none;
-}
-
- .description {
-    vertical-align: middle;
-    margin-top: 10%;
-    text-align: center;
-    color:white;
-    font-size: 40px;
-}
-
+/* Row and col */
 .row {
-  
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  margin-top: 7%;
+  text-align: center;
 }
 
 .row .col-4{
-    float: left;
-    border: 1px solid white;
-}
-
-.col-4 a:hover {
-  color: green;
+  width: 33.33%;
+  float: left;
 }
 
 .col-4 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: white;
   }
 
-  .des {
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-
-  .col-4 {
-    margin: 2%;
-    background-color: green;
-  }
-
-  .col-4 img {
-    height: 250px;
-    width: 250px;
+.col-4 img {
+  height: 250px;
+  width: 250px;
+  border: 2px solid black;
   } 
+
+
+/* row col description */
+.des {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* footer */
+  
+footer {
+  background-color: #2D4F21;
+  margin-top: 600px;
+  text-align: center; 
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+

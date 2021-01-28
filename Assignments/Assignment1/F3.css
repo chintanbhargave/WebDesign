@@ -1,49 +1,62 @@
+html,body{
+  margin: auto;
+}
 
-.name {
- 
+/* body {
+  background-image: url("tornaf3.jpg");
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  margin: auto;
+
+} */
+ /* Header */
+
+ .name {
   font-size: 80px;
   text-align:left;
   max-width: 100%;
-  padding-left: 4%;
-  padding-top: 4%;
-
-}
-.nav {
-  margin-top: 0%;
-  margin-left: 65%;
+  margin-left: 4%;
+  margin-top: 2%;
  
 }
+/* Navigation */
+.nav {
+margin-top: 0%;
+margin-left: 71%;
+}
+
 .nav a {
-    padding-left: 5%;
-    text-decoration: none;
-    color: black;
+margin-left: 5%;
+text-decoration: none;
+color: black;
 }
 
 .nav a:hover{
-  color: grey;
-  border-bottom: 3px solid black;
+color: white;
+border-bottom: 2px solid black;
 }
 
+/* footer */
+
 footer {
-  padding-top: 600px;
-  text-align: center;
- 
+background-color: #2D4F21;
+margin-top: 630px;
+text-align: center; 
 }
 
 footer a{
-  color: black;
+color: white;
+text-decoration: none;
+}
+
+.description a{
+  color: white;
+  font-size: 30px;
   text-decoration: none;
 }
 
-.des {
-  text-align: left;
-  text-decoration: none;
-  color:black;
-  font-size: medium;
-  
-}
-
-img {
-  height: 400px;
-  width: 400px;
+.description {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 30px;
 }

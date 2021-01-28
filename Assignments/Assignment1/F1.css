@@ -1,45 +1,64 @@
+html{
+  margin: auto;
+}
+
+body {
+  margin: auto;
+  background-image: url("raigadf1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+  /* Header */
 
 .name {
- 
-  font-size: 80px;
-  text-align:left;
-  max-width: 100%;
-  padding-left: 4%;
-  padding-top: 4%;
-
-}
+    font-size: 80px;
+    text-align:left;
+    max-width: 100%;
+    margin-left: 4%;
+    margin-top: 2%;
+   
+  }
+/* Navigation */
 .nav {
   margin-top: 0%;
-  margin-left: 65%;
- 
-}
-.nav a {
-    padding-left: 5%;
-    text-decoration: none;
-    color: black;
-}
+  margin-left: 71%;
+  }
 
+.nav a {
+  margin-left: 5%;
+  text-decoration: none;
+  color: black;
+  }
+  
 .nav a:hover{
-  color: grey;
+  color: white;
   border-bottom: 3px solid black;
 }
 
+/* footer */
+  
 footer {
-  padding-top: 600px;
-  text-align: center;
- 
+  background-color: #2D4F21;
+  margin-top: 630px;
+  text-align: center; 
 }
 
 footer a{
+  color: white;
+  text-decoration: none;
+}
+/* page description */
+
+.description a{
   color: black;
+  font-size: 30px;
   text-decoration: none;
 }
 
-.des {
-  text-align: left;
-  text-decoration: none;
-  color:black;
-  font-size: medium;
-  
+.description {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 30px;
 }
-

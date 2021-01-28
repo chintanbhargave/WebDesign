@@ -1,33 +1,53 @@
+html,body {
+    margin: auto;
+}
 
-.about {
-    font-size: 100px;
-    padding-left: 5%;
-    padding-top: 4%;
-    text-align: center;
+body {
+    background-image: url('tailbaila.JPG');
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    margin: auto;
+  } 
+
+
+.name {
+    font-size: 80px;
+    text-align:left;
+    max-width: 100%;
+    margin-left: 4%;
+    margin-top: 2%;
+   
+  }
+
+/* Navigation */
+    .nav {
+    margin-top: 0%;
+    margin-left: 71%;
+    }
     
-}
-
-nav {
-    margin-top: 5%;
-    margin-left: 60%;
-   
-  }
-nav a {
-      padding-left: 10%;
-      text-decoration: none;
-      color: black;
-  }
-  
-  footer {
-    padding-top: 600px;
-    text-align: center;
-   
-}
-
- footer a{
+    .nav a {
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    }
+    
+    .nav a:hover{
+    color: white;
+    border-bottom: 2px solid black;
+    }
+    
+    /* footer */
+    
+    footer {
+    background-color: #2D4F21;
+    margin-top: 630px;
+    text-align: center; 
+    }
+    
+    footer a{
     color: white;
     text-decoration: none;
-}
+    }
 
 .description {
     vertical-align: middle;
