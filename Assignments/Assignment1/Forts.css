@@ -4,6 +4,7 @@ body {
   background-attachment: fixed; 
   background-size: 100% 100%;
   margin: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   /* Header */
@@ -33,7 +34,7 @@ body {
   }
   
 .nav a:hover{
-  color: white;
+  color: grey;
   border-bottom: 2px solid black;
 }
 /* page description */

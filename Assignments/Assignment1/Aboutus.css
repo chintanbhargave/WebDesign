@@ -7,6 +7,7 @@ body {
     background-attachment: fixed; 
     background-size: 100% 100%;
     margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   } 
 
 
@@ -32,7 +33,7 @@ body {
     }
     
     .nav a:hover{
-    color: white;
+    color: grey;
     border-bottom: 2px solid black;
     }
     
@@ -55,4 +56,41 @@ body {
     text-align: center;
     color:black;
     font-size: 20px;
+}
+
+/* about container */
+.container {
+  
+  width: 80%;
+  margin: 50px auto;
+  color:black;
+  margin-top: 10%;
+}
+
+.about-box{
+
+  background:white;
+  display: flex;
+
+}
+
+.about-left {
+  flex-basis: 30%;
+  padding: 40px 60px;
+  background: #8BA753;
+  /* color: white; */
+  font-size: large;
+}
+
+
+.about-right {
+  flex-basis: 70%;
+  background: white;
+  padding: 40px 60px;
+  font-size: large;
+  text-align: justify;
+}
+
+li {
+  margin-top: 2%;
 }
