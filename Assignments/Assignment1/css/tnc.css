@@ -1,0 +1,98 @@
+html,body {
+    margin: auto;
+}
+
+body {
+    background-image: url('tnc.JPG');
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+.name{
+    /* background-color: black; */
+    font-size: 80px;
+    text-align:left;
+    max-width: 100%;
+    padding-left: 4%;
+    padding-top: 2%;
+    color: white;
+   
+  }
+
+/* footer */
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #D0DDEE;
+    padding: 1px;
+    text-align: center;
+  }
+  
+  .footer .mailto {
+    float: left; 
+    width: 33.33%;
+  }
+  
+  .footer .mailto a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer .tnc {
+    float: left; 
+    width: 33.33%;
+  } 
+  
+  .footer .tnc a{
+    text-decoration: none;
+    color: black;
+  } 
+  
+  .footer .copy {
+    width: 33.33%;
+    float: left;
+  }
+  .footer .copy a{
+    text-decoration: none;
+    color: black;
+  }
+
+  /* Navigation */
+  .nav {
+    margin-top: 0%;
+    margin-left: 71%;
+    font-size: large;
+    }
+  
+  .nav a {
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    }
+    
+  .nav a:hover{
+    color: white;
+    border-bottom: 2px solid black;
+  }
+
+  .row {
+      width: 100%;
+  }
+
+  .col-12 {
+      width: 60%;
+      background-color: #FFEBA9;
+      /* background-color: #97dc30; */
+      margin: auto;
+      margin-top: 10%;
+      font-size: large;
+      padding: 3px;
+  }
+
+.row .col-12 li {
+    padding-top: 2%;
+}
