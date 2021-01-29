@@ -23,6 +23,7 @@ body {
 .nav {
   margin-top: 0%;
   margin-left: 71%;
+  font-size: large;
   }
   
   .nav a {
@@ -36,20 +37,46 @@ body {
   border-bottom: 2px solid black;
   }
   
-  /* footer */
-  
-  footer {
-  background-color: #2D4F21;
-  margin-top: 630px;
-  text-align: center; 
-  width: 100%;
-  }
-  
-  footer a{
-  color: white;
-  text-decoration: none;
-  }
+/* footer */
 
+.footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #D0DDEE;
+  padding: 1px;
+  text-align: center;
+}
+
+.footer .mailto {
+  float: left; 
+  width: 33.33%;
+}
+
+.footer .mailto a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer .tnc {
+  float: left; 
+  width: 33.33%;
+} 
+
+.footer .tnc a{
+  text-decoration: none;
+  color: black;
+} 
+
+.footer .copy {
+  width: 33.33%;
+  float: left;
+}
+.footer .copy a{
+  text-decoration: none;
+  color: black;
+}
 
 /* form container */
 .container {

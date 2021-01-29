@@ -4,7 +4,7 @@ html{
 
 body {
   margin: auto;
-  background-image: url("raigadf1.jpg");
+  background-image: url("raigadf1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -25,6 +25,7 @@ body {
 .nav {
   margin-top: 0%;
   margin-left: 71%;
+  font-size: large;
   }
 
 .nav a {
@@ -39,21 +40,50 @@ body {
 }
 
 /* footer */
-  
-footer {
-  background-color: #2D4F21;
-  margin-top: 630px;
-  text-align: center; 
+
+.footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #D0DDEE;
+  padding: 1px;
+  text-align: center;
 }
 
-footer a{
-  color: white;
-  text-decoration: none;
+.footer .mailto {
+  float: left; 
+  width: 33.33%;
 }
+
+.footer .mailto a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer .tnc {
+  float: left; 
+  width: 33.33%;
+} 
+
+.footer .tnc a{
+  text-decoration: none;
+  color: black;
+} 
+
+.footer .copy {
+  width: 33.33%;
+  float: left;
+}
+.footer .copy a{
+  text-decoration: none;
+  color: black;
+}
+
 /* page description */
 
 .description a{
-  color: black;
+  color:white;
   font-size: 30px;
   text-decoration: none;
 }
@@ -62,4 +92,5 @@ footer a{
   text-align: center;
   margin-top: 10%;
   font-size: 30px;
+  color: white;
 }
