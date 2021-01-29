@@ -3,7 +3,7 @@ html,body {
 }
 
 body {
-    background-image: url('Suvarnadurga.JPG');
+    background-image: url('/Assignments/Assignment1/Images/Suvarnadurga.JPG');
     background-attachment: fixed; 
     background-size: cover;
     margin: auto;

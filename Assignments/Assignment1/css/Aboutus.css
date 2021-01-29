@@ -3,7 +3,7 @@ html,body {
 }
 
 body {
-    background-image: url('tailbaila.JPG');
+    background-image: url('/Assignments/Assignment1/Images/tailbaila.JPG');
     background-attachment: fixed; 
     background-size: 100% 100%;
     margin: auto;

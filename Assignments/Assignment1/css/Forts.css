@@ -1,6 +1,8 @@
 
 body {
-  background-image: url('Background.JPG');
+  /* background-image: url('/Images/Background.JPG'); */
+
+  background-image: url('/Assignments/Assignment1/Images/Background.JPG');
   background-attachment: fixed; 
   background-size: 100% 100%;
   margin: auto;
