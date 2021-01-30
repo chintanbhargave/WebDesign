@@ -2,16 +2,15 @@ html,body {
     margin: auto;
 }
 body {
-  /* background-image: url('Images/Suvarnadurga.JPG'); */
-  /* background-attachment: fixed;  */
-  /* background-size: cover; */
+  background-image: url('/Assignments/Assignment1/Images/copy.JPG');
+  background-attachment: fixed; 
+  background-size: cover;
   margin: auto;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} 
-
+}
 
 .name{
-    background-color: grey;
+    
     font-size: 80px;
     text-align:left;
     max-width: 100%;
@@ -77,3 +76,20 @@ body {
     color: grey;
     border-bottom: 2px solid black;
   }
+/* description */
+.row {
+    width: 100%;
+}
+
+.col-12 {
+    width: 60%;
+    background-color: #E9C49F;
+    margin: auto;
+    margin-top: 10%;
+    font-size: large;
+    padding: 3px;
+}
+
+.row .col-12 li {
+  padding-top: 2%;
+}
