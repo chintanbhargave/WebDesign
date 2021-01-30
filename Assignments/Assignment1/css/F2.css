@@ -85,8 +85,36 @@ border-bottom: 2px solid black;
   text-decoration: none;
 }
 
-.description {
-  text-align: center;
+/* container */
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
-  font-size: 30px;
+  
+}
+
+.container .left {
+  width: 40%;
+  float: left;
+  margin: auto;
+  background-color: #D1D2D6;
+  display: inline-block;
+}
+
+.container .left img {
+  height: 400px;
+  width: 400px;
+  display: block;
+}
+
+.container .right {
+  width: 60%;
+  float: left;
+  margin: auto;
+  padding-top: 9%;
+  background-color: #D1D2D6;
+  font-size: large;
+  padding-bottom: 16.6%;
 }
