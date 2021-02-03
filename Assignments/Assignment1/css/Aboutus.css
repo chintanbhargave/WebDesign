@@ -94,6 +94,7 @@ body {
   margin: 50px auto;
   color:black;
   margin-top: 10%;
+  opacity: 0.7;
 }
 
 .about-box{
@@ -116,7 +117,6 @@ body {
   background: white;
   padding: 40px 60px;
   font-size: large;
-  text-align: justify;
 }
 
 li {
