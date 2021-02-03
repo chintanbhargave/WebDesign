@@ -5,24 +5,43 @@ body {
     background-image: url("images/background.gif");
 }
 
-header{
-    background-color: #D2B48C;
-}
-
-footer {
-    background-color: #D2B48C;
-    color: #000000;
-}
 
 nav {
-    font-weight: bold;
     text-align: center;
-    background-color: #E6D6A9;
+    padding-top: 0%;
+    float: left;
+    width: 160px;
     padding: 10px;
 }
 
 nav a {
     text-decoration: none;
+    padding-right: 1em;
+    font-size: 1.3em;
+    width: 8em;
+    font-weight: bold;
+    border-style: none;
+    padding-bottom: 15px;
+}
+
+nav a:link {
+    color: #795240;
+}
+
+nav a:visited {
+    color: #A58366;
+}
+
+nav a:hover {
+    color: #F5F5DC;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0%;
+    list-style-type: none;
+    padding-left: 0%;
+    font-size: 1.2em;
 }
 
 h1 {
@@ -33,6 +52,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     text-indent: -9999px;
+    background-color: #CCAA66;
 }
 
 h2 {
@@ -44,12 +64,12 @@ h3 {
     text-transform: uppercase;
 }
 
-dt {
-    font-weight: bold;
+P {
+    clear: left;
 }
 
-ul {
-    list-style-image: url("/Assignments/Assignment2/JavaJam/images/icon.png");
+dt {
+    font-weight: bold;
 }
 
 footer {
@@ -57,12 +77,27 @@ footer {
     text-align: center;
     font-style: italic;
     padding: 10px;
+    background-color: #D2B48C;
+    color: black;
+}
+
+footer a:link{
+    color: #2e0000;
+}
+
+footer a :visited {
+    color: black;
+}
+
+footer a:hover{
+    color: #F5F5DC;
 }
 
 #wrapper {
     width: 80%;
-    margin: auto;
-    background-color: #F5F5DC;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E2D2B0;
     min-width: 960px;
     max-width: 2048px;
     box-shadow: 3px 3px 3px #2E0000;
@@ -71,6 +106,26 @@ footer {
 main {
     padding: 20px;
     display: block;
+    background-color: #F5F5DC;
+    margin-left: 175px;
+  
+}
+
+main img {
+    float: left;
+    padding-right: 2em;
+}
+
+main ul {
+    list-style-image: url("images/icon.png");
+    list-style-position: inside;
+}
+
+main div {
+    overflow: auto;
+    font-size: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #hero {
@@ -81,7 +136,7 @@ main {
     background-size: 100% 100%;
 }
 
-.news {
+#news {
     margin-left: 20%;
     margin-right: 20%;
 }
