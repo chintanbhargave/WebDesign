@@ -38,8 +38,8 @@ dt {
     font-weight: bold;
 }
 
-ul {
-    list-style-image: url("/Assignments/Assignment2/JavaJam/images/icon.png");
+main ul {
+    list-style-image: url("images/icon.png");
 }
 
 footer {

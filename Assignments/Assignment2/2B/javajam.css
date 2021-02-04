@@ -5,43 +5,20 @@ body {
     background-image: url("images/background.gif");
 }
 
+footer {
+    background-color: #D2B48C;
+    color: #000000;
+}
 
 nav {
+    font-weight: bold;
     text-align: center;
-    padding-top: 0%;
-    float: left;
-    width: 160px;
+    background-color: #E6D6A9;
     padding: 10px;
 }
 
 nav a {
     text-decoration: none;
-    padding-right: 1em;
-    font-size: 1.3em;
-    width: 8em;
-    font-weight: bold;
-    border-style: none;
-    padding-bottom: 15px;
-}
-
-nav a:link {
-    color: #795240;
-}
-
-nav a:visited {
-    color: #A58366;
-}
-
-nav a:hover {
-    color: #F5F5DC;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0%;
-    list-style-type: none;
-    padding-left: 0%;
-    font-size: 1.2em;
 }
 
 h1 {
@@ -52,8 +29,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     text-indent: -9999px;
-    color: black;
-    background-color: #CCAA66;
+    background-color: #ccaa66;
 }
 
 h2 {
@@ -65,12 +41,12 @@ h3 {
     text-transform: uppercase;
 }
 
-P {
-    clear: left;
-}
-
 dt {
     font-weight: bold;
+}
+
+ul {
+    list-style-image: url("/Assignments/Assignment2/JavaJam/images/icon.png");
 }
 
 footer {
@@ -78,27 +54,12 @@ footer {
     text-align: center;
     font-style: italic;
     padding: 10px;
-    background-color: #D2B48C;
-    color: black;
-}
-
-footer a:link{
-    color: #2e0000;
-}
-
-footer a :visited {
-    color: black;
-}
-
-footer a:hover{
-    color: #F5F5DC;
 }
 
 #wrapper {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #E2D2B0;
+    margin: auto;
+    background-color: #F5F5DC;
     min-width: 960px;
     max-width: 2048px;
     box-shadow: 3px 3px 3px #2E0000;
@@ -107,26 +68,6 @@ footer a:hover{
 main {
     padding: 20px;
     display: block;
-    background-color: #F5F5DC;
-    margin-left: 175px;
-  
-}
-
-main img {
-    float: left;
-    padding-right: 2em;
-}
-
-main ul {
-    list-style-image: url("images/icon.png");
-    list-style-position: inside;
-}
-
-main div {
-    overflow: auto;
-    font-size: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 #hero {
