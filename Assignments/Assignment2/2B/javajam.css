@@ -10,13 +10,13 @@ footer {
     color: #000000;
 }
 
-nav {
+.nav {
     font-weight: bold;
     background-color: #E6D6A9;
     padding: 10px;
 }
 
-nav ul {
+.nav ul {
     list-style: none;
     margin-left: auto;
     margin-right: auto;
@@ -25,29 +25,29 @@ nav ul {
 
 }
 
-nav a{
+.nav a{
     display: block;
     text-decoration: none;
     color: #996633;
 }
 
-nav ul li{
+.nav ul li{
     float: left;
     width: 100px;
     height: 20px;
     text-align: center;
 }
 
-nav ul li ul li {
+.nav ul li ul li {
     display: none;
     border: 2px solid black;
 }
 
-nav ul li ul li a:hover{
+.nav ul li ul li a:hover{
     color: white;
 }
 
-nav ul li:hover ul li {
+.nav ul li:hover ul li {
     display: block;
     background-color: #E5D6A9;
 
@@ -192,3 +192,18 @@ button {
 figcaption {
     text-align: center;
 }
+
+
+@media only screen and (max-width: 375px) {
+    .header {
+        padding: 60px;
+        text-align: center;
+      }
+
+    .nav {
+        flex-direction: column;
+    }  
+    h1 {
+        background-image: none;
+    }  
+  }
