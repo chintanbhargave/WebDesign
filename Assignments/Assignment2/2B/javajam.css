@@ -50,8 +50,8 @@ footer {
 .nav ul li:hover ul li {
     display: block;
     background-color: #E5D6A9;
-
 }
+
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -194,18 +194,21 @@ figcaption {
 
 
 @media only screen and (max-width: 375px) {
-    /* .header {
-        padding: 60px;
-        text-align: center;
-      }
+    .nav ul li ul{
+        margin-right:-25% ;
+    }
 
-    .nav {
-        flex-direction: column;
-    }  
-    h1 {
-        background-image: none;
-    }   */
+    .nav ul li ul li {
+        display: none;
+        border: 2px solid white;
+        height: fit-content;
+    }
 
+    .nav ul li:hover ul li {
+        display: block;
+        background-color: black;
+    }
+    
     footer {
         font-size: 40px;
         padding: 2%;
@@ -270,6 +273,7 @@ figcaption {
 
     .address{
         color: #996633;
+        font-size: 40px;
     }
 
     main dl {
@@ -293,7 +297,7 @@ figcaption {
     #container .row1 .col-4{
         width: 100%;
         float: none;
-        /* text-align: center; */
+        text-align: center;
     }
 
     #container .row1{
