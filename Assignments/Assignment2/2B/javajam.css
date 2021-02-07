@@ -121,6 +121,7 @@ table {
     width: 60%;    
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2%;
 }
 
 table, th, td {
@@ -175,7 +176,7 @@ button {
 
 #container .row1{
     display: flex;
-   
+   margin-top: 3%;
 }
 
 #container .row1 .col-4{
@@ -253,6 +254,7 @@ figcaption {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 70px;
         color: black;
+        text-align: center;
         /* padding: 10px; */
         
     }
@@ -280,19 +282,23 @@ figcaption {
         font-size: 50px;
     }
 
+    main dl strong {
+        color: black;
+    }
+
     .music p {
         font-size: 40px;
     }
 
     h3{
         font-size: 35px;
+        padding: 5px;
     }
 
     #news img {
         height: 170px;
         width: 170px;
     }
-
 
     #container .row1 .col-4{
         width: 100%;
@@ -302,6 +308,7 @@ figcaption {
 
     #container .row1{
         display: block;
+        margin-top: 40px;
     }
 
     figcaption {
@@ -339,4 +346,26 @@ figcaption {
         height:70px;
         font-size: 40px;
     }
+
+    table {
+        width: 80%; 
+        height: 400px;   
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    table, th, td {
+        border: 1px solid #996633;
+        text-align: center;
+        color: black;
+      }
+      table th {
+        background-color: #CCA965;
+      }
+
+      table tr {
+          font-size: 50px;
+      }
+
+      
   }
