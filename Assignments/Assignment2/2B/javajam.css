@@ -320,7 +320,7 @@ figcaption {
         width: 800px;
     }
     #container img:hover{
-        transform: none;
+        transform: scale(1.3);
     }
 
     #gallery {
