@@ -13,7 +13,7 @@
 
 <body onload="HideTable()">
 	<table id="myTable">
-		<tr>
+		<tr id="mainrow">
 			<th></th>
 			<th>STUDENT</th>
 			<th>ADVISOR</th>
@@ -22,10 +22,11 @@
 			<th>TYPE</th>
 			<th>BUDGET<br />#</th>
 			<th>PERCENTAGE</th>
-			<th>DELETE</th>
+			<!-- <th>Delete</th> -->
 		</tr>
 		<tr id="row">
-			<td><input type="checkbox" id="check" /><br /><br /><a id="anch"><img src="down.png" width="25px" /></a>
+			<td><input type="checkbox" id="check" onclick="check(this)" /><br /><br /><a id="anch" href="#"
+					onclick="expand(this)"><img src="down.png" width="25px" /></a>
 			</td>
 			<td>Student 1</td>
 			<td>Teacher 1</td>
@@ -34,7 +35,6 @@
 			<td>TA</td>
 			<td>12345</td>
 			<td>100%</td>
-			<td><button id="del" onclick="del()">Delete</button></td>
 		</tr>
 		<tr class="dropDownTextArea" id="dropDownTextArea">
 			<td colspan="8">
@@ -47,8 +47,9 @@
 				Award Status:<br /><br /><br />
 			</td>
 		</tr>
-		<!-- <tr>
-			<td><input type="checkbox" id="check" /><br /><br /><img src="down.png" width="25px" />
+		<tr>
+			<td><input type="checkbox" id="check" onclick="check(this)" /><br /><br /><a id="anch" href="#"
+					onclick="expand(this)"><img src="down.png" width="25px" /></a>
 			</td>
 			<td>Student 2</td>
 			<td>Teacher 2</td>
@@ -57,7 +58,6 @@
 			<td>TA</td>
 			<td>23456</td>
 			<td>100%</td>
-			<td><button class="del">Delete</button></td>
 		</tr>
 		<tr class="dropDownTextArea">
 			<td colspan="8">
@@ -71,7 +71,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td><input type="checkbox" id="check" /><br /><br /><img src="down.png" width="25px" />
+			<td><input type="checkbox" id="check" onclick="check(this)" /><br /><br /><a id="anch" href="#"
+					onclick="expand(this)"><img src="down.png" width="25px" /></a>
 			</td>
 			<td>Student 3</td>
 			<td>Teacher 3</td>
@@ -80,7 +81,7 @@
 			<td>TA</td>
 			<td>34567</td>
 			<td>100%</td>
-			<td><button class="del">Delete</button></td>
+
 		</tr>
 		<tr class="dropDownTextArea">
 			<td colspan="8">
@@ -92,11 +93,12 @@
 				Comments:<br /><br /><br />
 				Award Status:<br /><br /><br />
 			</td>
-		</tr> -->
+		</tr>
 	</table>
 
 	<br /><br />
 
+	<p id="hel"></p>
 	<button id="button" onclick="hello()">SUBMIT SELECTED AWARDS</button>
 	<button id="add" onclick="addrow()">Add New Student</button>
 

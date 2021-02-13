@@ -16,28 +16,57 @@ var socialMedia = {
 
 var t = new Title("CONNECT WITH ME!");
 
-var picture = '<input type="checkbox" id="check" /><br /><br /><img src="down.png" width="25px" />';
+var picture = '<input type="checkbox" onclick="check(this) " /><br /><br /><a href="#" onclick="expand(this)"><img src="down.png" width="25px" />';
+
+var dbtn = '<td><button id="del" onclick="del(this)">Delete</button></td>';
+
+
 
 function HideTable() {
-  // console.log("hello")
-  document.getElementById('dropDownTextArea').style.display = "none";
+
+  //document.querySelectorAll('dropDownTextArea').style.display = "none";
   document.getElementById('button').disabled = true;
-  document.getElementById('del').style.display = "none";
+
 }
+
+function expand(drop) {
+
+  var erow = drop.parentNode.parentNode;
+  let sib = erow.nextElementSibling;
+  console.log(sib);
+
+  if (sib.style.display == "none") {
+    sib.style.display = 'block';
+
+  }
+  else {
+    sib.style.display = 'none';
+  }
+  // newrow = document.createElement("TR");
+
+  // newrow.innerHTML wrow);= "Hello, hi, how are you";
+  // abc.appendChild(ne
+
+
+
+}
+
 
 function addrow() {
   var tbl = document.getElementById('myTable');
-  var row = tbl.insertRow(2);
 
-  var cell0 = row.insertCell(0);
-  var cell1 = row.insertCell(1);
-  var cell2 = row.insertCell(2);
-  var cell3 = row.insertCell(3);
-  var cell4 = row.insertCell(4);
-  var cell5 = row.insertCell(5);
-  var cell6 = row.insertCell(6);
-  var cell7 = row.insertCell(7);
-  var cell8 = row.insertCell(8)
+  var trow = tbl.insertRow(1);
+  row.setAttribute("id", "row");
+
+
+  var cell0 = trow.insertCell(0);
+  var cell1 = trow.insertCell(1);
+  var cell2 = trow.insertCell(2);
+  var cell3 = trow.insertCell(3);
+  var cell4 = trow.insertCell(4);
+  var cell5 = trow.insertCell(5);
+  var cell6 = trow.insertCell(6);
+  var cell7 = trow.insertCell(7);
 
   cell0.innerHTML = picture;
   cell1.innerHTML = "Student 1";
@@ -47,29 +76,62 @@ function addrow() {
   cell5.innerHTML = "TA";
   cell6.innerHTML = "12345";
   cell7.innerHTML = "100%";
-  cell8.innerHTML = "";
+
 }
 
-document.getElementById('check').onclick = function () {
+function check(chbox) {
 
-  var row = document.getElementById('row');
-  if (this.checked) {
-    console.log(row);
+  td1 = chbox.parentNode;
+  row = td1.parentNode;
+  var head = document.getElementById('mainrow');
+
+
+  if (chbox.checked) {
+
     row.style.backgroundColor = "orange";
-    document.getElementById('del').style.display = "block";
+    var flag = 1;
+
+    // insert cell and delete button
+    cell8 = document.createElement("TD");
+    cell8.innerHTML = dbtn;
+    row.appendChild(cell8);
+
+    //delete heading
+
+    col = document.createElement('TH');
+    col.innerText = "Delete";
+    head.appendChild(col);
+
     document.getElementById('button').disabled = false;
     document.getElementById('button').style.backgroundColor = 'orange';
+
   }
   else {
+
     row.style.backgroundColor = "white";
-    document.getElementById('del').style.display = "none";
-    document.getElementById('button').disabled = true;
-    document.getElementById('button').style.backgroundColor = 'grey';
+    row.removeChild(row.lastElementChild);
+    head.removeChild(head.lastElementChild);
+
+    if (flag == 0) {
+      document.getElementById('button').style.backgroundColor = 'orange';
+      document.getElementById('button').disabled = false;
+    }
+    else {
+      document.getElementById('button').disabled = true;
+      document.getElementById('button').style.backgroundColor = 'grey';
+    }
+
   }
 }
 
-document.getElementById('del').onclick = function () {
-  var row = document.getElementById('row');
-  document.de
+function del(dbtn) {
+
+  var i = dbtn.parentNode.parentNode.rowIndex;
+  document.getElementById("myTable").deleteRow(i);
 
 }
+
+// function hello() {
+
+//   document.getElementById('hel').innerHTML = "hello";
+// }
