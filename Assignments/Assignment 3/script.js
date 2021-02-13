@@ -23,8 +23,6 @@ var dbtn = '<td><button id="del" onclick="del(this)">Delete</button></td>';
 
 
 function HideTable() {
-
-  //document.querySelectorAll('dropDownTextArea').style.display = "none";
   document.getElementById('button').disabled = true;
 
 }
@@ -42,12 +40,6 @@ function expand(drop) {
   else {
     sib.style.display = 'none';
   }
-  // newrow = document.createElement("TR");
-
-  // newrow.innerHTML wrow);= "Hello, hi, how are you";
-  // abc.appendChild(ne
-
-
 
 }
 
@@ -89,7 +81,6 @@ function check(chbox) {
   if (chbox.checked) {
 
     row.style.backgroundColor = "orange";
-    var flag = 1;
 
     // insert cell and delete button
     cell8 = document.createElement("TD");
@@ -100,7 +91,10 @@ function check(chbox) {
 
     col = document.createElement('TH');
     col.innerText = "Delete";
-    head.appendChild(col);
+    if (document.querySelectorAll("input[type='checkbox']:checked").length == 1) {
+
+      head.appendChild(col);
+    }
 
     document.getElementById('button').disabled = false;
     document.getElementById('button').style.backgroundColor = 'orange';
@@ -110,15 +104,13 @@ function check(chbox) {
 
     row.style.backgroundColor = "white";
     row.removeChild(row.lastElementChild);
-    head.removeChild(head.lastElementChild);
+    head.removeChild(col);
 
-    if (flag == 0) {
-      document.getElementById('button').style.backgroundColor = 'orange';
-      document.getElementById('button').disabled = false;
-    }
-    else {
-      document.getElementById('button').disabled = true;
+
+    if (document.querySelectorAll("input[type='checkbox']:checked").length == 0) {
+      head.removeChild(col);
       document.getElementById('button').style.backgroundColor = 'grey';
+      document.getElementById('button').disabled = true;
     }
 
   }
