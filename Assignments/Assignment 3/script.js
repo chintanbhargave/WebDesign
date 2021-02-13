@@ -104,7 +104,7 @@ function check(chbox) {
 
     row.style.backgroundColor = "white";
     row.removeChild(row.lastElementChild);
-    head.removeChild(col);
+    //head.removeChild(col);
 
 
     if (document.querySelectorAll("input[type='checkbox']:checked").length == 0) {
