@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Feedback</title>
+	<style>
+		label {
+			float: left;
+			width: 150px;
+		}
+
+		#container {
+			width: 700px;
+			margin: auto;
+			background-color: beige;
+		}
+
+		main {
+			padding: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+
+		<main>
+			<h2>Feeback</h2>
+			<h3>Love something? Hate something? Let us know!</h3>
+			Note : Fields marked with an asterisk(*) are mandatory
+			<br><br>
+			<form method="post" novalidate onsubmit="submit()">
+				<label>Title*:</label>
+				<input type="radio" name="title" id="miss" value="miss" required="required" />Miss
+				<input type="radio" name="title" id="mr" value="mr" required="required" />Mr.
+				<input type="radio" name="title" id="mrs" value="mrs" required="required" />Mrs.
+				<br><br>
+
+				<label for="firstName">First Name*:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="First Name"
+					onblur="validate(this, 1)" />
+				<br><br>
+
+				<div id="ErrorFName" style="display: none;color: red;">
+					Only Text value is allowed.
+				</div>
+
+				<label for="lastName">Last Name*:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name" onblur="validate(this, 2)" />
+				<br><br>
+
+				<div id="ErrorLName" style="display: none;color: red;">
+					Only Text value is allowed.
+				</div>
+
+
+				<label for="emailId">Email Id*:</label>
+				<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com"
+					onblur="validate(this,3)" />
+				<br><br>
+
+				<div id="ErrorEmail" style="display: none;color: red;">
+					Please Enter valid Email address.
+				</div>
+
+
+				<label for="phoneNumber">Phone Number*:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx"
+					onblur="validate(this,4)" />
+				<br><br>
+
+				<div id="ErrorPhn" style="display: none;color: red;">
+					Only Numbers are allowed.
+				</div>
+
+				<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" onblur="validate(this,5)" />
+				<br><br>
+
+				<div id="ErrorZip" style="display: none;color: red;">
+					Only Numbers are allowed..
+				</div>
+
+				<label for="zipcode">How did you hear*:</label>
+				<input type='checkbox' name="source" value="facebook" /> Facebook
+				<input type='checkbox' name="source" value="google" /> Google
+				<input type='checkbox' name="source" value="yelp" /> Yelp
+				<br><br>
+
+				<label for="comments">Comments*:</label>
+				<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+				<br><br>
+
+				<label for="select">Select a Day:</label>
+				<select id="beverages" name="beverages" onchange="getbox()">
+					<option value="select">-- Select--</option>
+					<option value="day1">Monday</option>
+					<option value="day2">Tuesday</option>
+					<option value="day3">Wednesday</option>
+					<option value="day4">Thursday</option>
+					<option value="day5">Friday</option>
+				</select>
+				<br><br>
+
+				<label for="checkbox"> </label>
+
+				<div id="days">
+
+					<div id="day1" style="display: none;">
+						<input id="mon1" type="checkbox" onclick="isclicked(this)" />
+						<label for="mon1">First Day</label>
+						<br><br>
+						<input id="txt1" type="text" placeholder="hello1" style="display: none;" required />
+					</div>
+
+					<div id="day2" style="display: none;">
+						<input id="tue2" type="checkbox" onclick="isclicked(this)" />
+						<label for="tue2">Second Day</label>
+						<br><br>
+						<input id="txt2" type="text" placeholder="hello2" style="display: none;" required />
+					</div>
+
+					<div id="day3" style="display: none;">
+						<input id="wed3" type="checkbox" onclick="isclicked(this)" />
+						<label for="wed31">Third Day</label>
+						<br><br>
+						<input id="txt3" type="text" placeholder="hello3" style="display: none;" required />
+					</div>
+
+					<div id="day4" style="display: none;">
+						<input id="thu4" type="checkbox" onclick="isclicked(this)" />
+						<label for="thu4">Fourth Day</label>
+						<br><br>
+						<input id="txt4" type="text" placeholder="hello4" style="display: none;" required />
+					</div>
+
+					<div id="day5" style="display: none;">
+						<input id="fri5" type="checkbox" onclick="isclicked(this)" />
+						<label for="fri5">Fifth Day</label>
+						<br><br>
+						<input id="txt5" type="text" placeholder="hello5" style="display: none;" required />
+					</div>
+
+				</div>
+
+				<br><br>
+				<input type="Submit">
+				<input type="Reset">
+				<br><br>
+			</form>
+		</main>
+	</div>
+
+	<script>
+		function validate(obj, no) {
+
+			var RegexName = /[a-zA-z]+$/;
+			var RegexEmail = /([\w]+)\@([\w]+)\.([a-zA-Z]+)$/;
+			var RegexPhone = /\d{3}$\-\d{3}$\-\d{4}$/;
+			var RegexZip = /\d{5}$/;
+
+			switch (no) {
+
+				case 1:
+					if (!obj.value.trim().match(RegexName)) {
+						obj.style.border = "2px solid red";
+						document.getElementById('ErrorFName').style.display = "block";
+						obj.value = "";
+					}
+					else {
+						obj.style.border = "";
+						document.getElementById('ErrorFName').style.display = "none";
+					}
+					break;
+
+				case 2:
+					if (!obj.value.trim().match(RegexName)) {
+						obj.style.border = "2px solid red";
+						document.getElementById('ErrorLName').style.display = "block";
+						obj.value = "";
+					}
+					else {
+						obj.style.border = "";
+						document.getElementById('ErrorLName').style.display = "none";
+					}
+					break;
+
+				case 3:
+					if (!obj.value.trim().match(RegexEmail)) {
+						obj.style.border = "2px solid red";
+						document.getElementById('ErrorEmail').style.display = "block";
+						obj.value = "";
+					}
+					else {
+						obj.style.border = "";
+						document.getElementById('ErrorEmail').style.display = "none";
+					}
+					break;
+
+				case 4:
+					if (!obj.value.trim().match(RegexPhone)) {
+						obj.style.border = "2px solid red";
+						document.getElementById('ErrorPhn').style.display = "block";
+						obj.value = "";
+					}
+					else {
+						obj.style.border = "";
+						document.getElementById('ErrorPhn').style.display = "none";
+					}
+					break;
+
+				case 5:
+					if (!obj.value.trim().match(RegexZip)) {
+						obj.style.border = "2px solid red";
+						document.getElementById('ErrorZip').style.display = "block";
+						obj.value = "";
+					}
+					else {
+						obj.style.border = "";
+						document.getElementById('ErrorZip').style.display = "none";
+					}
+					break;
+
+			}
+		}
+
+		function getbox() {
+
+			divNone();
+			console.log("hello");
+			var v = document.getElementById("beverages").value;
+			element = document.getElementById(v);
+			element.style.display = "block";
+		}
+
+		function isclicked(chck) {
+
+			if (chck.checked == true) {
+				var parent = chck.parentNode.id;
+
+				if (parent == "day1") {
+					document.getElementById("txt1").style.display = "block";
+				}
+				else if (parent == "day2") {
+					document.getElementById("txt2").style.display = "block";
+				}
+				else if (parent == "day3") {
+					document.getElementById("txt3").style.display = "block";
+				}
+				else if (parent == "day4") {
+					document.getElementById("txt4").style.display = "block";
+				}
+				else if (parent == "day5") {
+					document.getElementById("txt5").style.display = "block";
+				}
+				else {
+					document.getElementById("txt1").style.display = "none";
+				}
+			}
+			else {
+				var parent = chck.parentNode.id;
+
+				if (parent == "day1") {
+					document.getElementById("txt1").style.display = "none";
+				}
+				else if (parent == "day2") {
+					document.getElementById("txt2").style.display = "none";
+				}
+				else if (parent == "day3") {
+					document.getElementById("txt3").style.display = "none";
+				}
+				else if (parent == "day4") {
+					document.getElementById("txt4").style.display = "none";
+				}
+				else if (parent == "day5") {
+					document.getElementById("txt5").style.display = "none";
+				}
+				else {
+					document.getElementById("txt1").style.display = "none";
+				}
+			}
+
+		}
+
+		function divNone() {
+
+			var element1 = document.getElementById('day1');
+			element1.style.display = "none";
+
+			var element2 = document.getElementById('day2');
+			element2.style.display = "none";
+
+			var element3 = document.getElementById('day3');
+			element3.style.display = "none";
+
+			var element4 = document.getElementById('day4');
+			element4.style.display = "none";
+
+			var element5 = document.getElementById('day5');
+			element5.style.display = "none";
+
+		}
+	</script>
+
+</body>
+
+</html>
