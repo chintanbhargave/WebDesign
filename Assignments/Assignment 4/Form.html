@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!Doctype html>
+<html lang="html">
 
 <head>
 	<title>Feedback</title>
@@ -29,7 +29,7 @@
 			<h3>Love something? Hate something? Let us know!</h3>
 			Note : Fields marked with an asterisk(*) are mandatory
 			<br><br>
-			<form method="post" novalidate onsubmit="submit()">
+			<form method="POST" onsubmit=" return checksubmit(this)">
 				<label>Title*:</label>
 				<input type="radio" name="title" id="miss" value="miss" required="required" />Miss
 				<input type="radio" name="title" id="mr" value="mr" required="required" />Mr.
@@ -37,8 +37,8 @@
 				<br><br>
 
 				<label for="firstName">First Name*:</label>
-				<input type="text" name="firstName" id="firstName" placeholder="First Name"
-					onblur="validate(this, 1)" />
+				<input type="text" name="firstName" id="firstName" placeholder="First Name" onblur="validate(this, 1)"
+					required />
 				<br><br>
 
 				<div id="ErrorFName" style="display: none;color: red;">
@@ -46,7 +46,8 @@
 				</div>
 
 				<label for="lastName">Last Name*:</label>
-				<input type="text" name="lastName" id="lastName" placeholder="Last Name" onblur="validate(this, 2)" />
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name" onblur="validate(this, 2)"
+					required />
 				<br><br>
 
 				<div id="ErrorLName" style="display: none;color: red;">
@@ -55,7 +56,7 @@
 
 
 				<label for="emailId">Email Id*:</label>
-				<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com"
+				<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" required
 					onblur="validate(this,3)" />
 				<br><br>
 
@@ -65,7 +66,7 @@
 
 
 				<label for="phoneNumber">Phone Number*:</label>
-				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx"
+				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required
 					onblur="validate(this,4)" />
 				<br><br>
 
@@ -74,7 +75,8 @@
 				</div>
 
 				<label for="zipcode">ZipCode*:</label>
-				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" onblur="validate(this,5)" />
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" onblur="validate(this,5)"
+					required />
 				<br><br>
 
 				<div id="ErrorZip" style="display: none;color: red;">
@@ -87,8 +89,8 @@
 				<input type='checkbox' name="source" value="yelp" /> Yelp
 				<br><br>
 
-				<label for="comments">Comments*:</label>
-				<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+				<label for="comment">Comments*:</label>
+				<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
 				<br><br>
 
 				<label for="select">Select a Day:</label>
@@ -107,46 +109,55 @@
 				<div id="days">
 
 					<div id="day1" style="display: none;">
-						<input id="mon1" type="checkbox" onclick="isclicked(this)" />
+						<input id="mon1" type="checkbox" name="selectlistcheckbox" value="First Day"
+							onclick="isclicked(this)" />
 						<label for="mon1">First Day</label>
 						<br><br>
-						<input id="txt1" type="text" placeholder="hello1" style="display: none;" required />
+						<input id="txt1" type="text" placeholder="hello1" style="display: none;" />
 					</div>
 
 					<div id="day2" style="display: none;">
-						<input id="tue2" type="checkbox" onclick="isclicked(this)" />
+						<input id="tue2" type="checkbox" name="selectlistcheckbox" value="Second Day"
+							onclick="isclicked(this)" />
 						<label for="tue2">Second Day</label>
 						<br><br>
-						<input id="txt2" type="text" placeholder="hello2" style="display: none;" required />
+						<input id="txt2" type="text" placeholder="hello2" style="display: none;" />
 					</div>
 
 					<div id="day3" style="display: none;">
-						<input id="wed3" type="checkbox" onclick="isclicked(this)" />
+						<input id="wed3" type="checkbox" name="selectlistcheckbox" value="Third Day"
+							onclick="isclicked(this)" />
 						<label for="wed31">Third Day</label>
 						<br><br>
-						<input id="txt3" type="text" placeholder="hello3" style="display: none;" required />
+						<input id="txt3" type="text" placeholder="hello3" style="display: none;" />
 					</div>
 
 					<div id="day4" style="display: none;">
-						<input id="thu4" type="checkbox" onclick="isclicked(this)" />
+						<input id="thu4" type="checkbox" name="selectlistcheckbox" value="Fourth Day"
+							onclick="isclicked(this)" />
 						<label for="thu4">Fourth Day</label>
 						<br><br>
-						<input id="txt4" type="text" placeholder="hello4" style="display: none;" required />
+						<input id="txt4" type="text" placeholder="hello4" style="display: none;" />
 					</div>
 
 					<div id="day5" style="display: none;">
-						<input id="fri5" type="checkbox" onclick="isclicked(this)" />
+						<input id="fri5" type="checkbox" name="selectlistcheckbox" value="Fifth Day"
+							onclick="isclicked(this)" />
 						<label for="fri5">Fifth Day</label>
 						<br><br>
-						<input id="txt5" type="text" placeholder="hello5" style="display: none;" required />
+						<input id="txt5" type="text" placeholder="hello5" style="display: none;" />
 					</div>
 
 				</div>
+				<br><br>
 
+				<input type="submit" />
+				<input type="reset" />
 				<br><br>
-				<input type="Submit">
-				<input type="Reset">
-				<br><br>
+
+				<div id="table_div">
+
+				</div>
 			</form>
 		</main>
 	</div>
@@ -156,7 +167,7 @@
 
 			var RegexName = /[a-zA-z]+$/;
 			var RegexEmail = /([\w]+)\@([\w]+)\.([a-zA-Z]+)$/;
-			var RegexPhone = /\d{3}$\-\d{3}$\-\d{4}$/;
+			var RegexPhone = /\d{3}-?\d{3}-\d{4}$/; //\d{3}$\-\d{3}$\-\d{4}$/;
 			var RegexZip = /\d{5}$/;
 
 			switch (no) {
@@ -227,7 +238,6 @@
 		function getbox() {
 
 			divNone();
-			console.log("hello");
 			var v = document.getElementById("beverages").value;
 			element = document.getElementById(v);
 			element.style.display = "block";
@@ -240,21 +250,24 @@
 
 				if (parent == "day1") {
 					document.getElementById("txt1").style.display = "block";
+					document.getElementById("txt1").required = true;
+
 				}
 				else if (parent == "day2") {
 					document.getElementById("txt2").style.display = "block";
+					document.getElementById("txt2").required = true;
 				}
 				else if (parent == "day3") {
 					document.getElementById("txt3").style.display = "block";
+					document.getElementById("txt3").required = true;
 				}
 				else if (parent == "day4") {
 					document.getElementById("txt4").style.display = "block";
+					document.getElementById("txt4").required = true;
 				}
 				else if (parent == "day5") {
 					document.getElementById("txt5").style.display = "block";
-				}
-				else {
-					document.getElementById("txt1").style.display = "none";
+					document.getElementById("txt5").required = true;
 				}
 			}
 			else {
@@ -300,6 +313,87 @@
 			element5.style.display = "none";
 
 		}
+
+		function checksubmit(data) {
+
+			//console.log("inside submit");
+			var radio = document.querySelector('input[type="radio"]:checked').value;
+			var fname = document.getElementById('firstName').value;
+			var lname = document.getElementById('lastName').value;
+			var mail = document.getElementById('emailId').value;
+			var phn = document.getElementById('phoneNumber').value;
+			var zip = document.getElementById('zipcode').value;
+			var how = document.querySelector('input[type="checkbox"][name="source"]:checked').value;
+			var cmts = document.getElementById('comments').value;
+			var day_checkbox = document.querySelector('input[type="checkbox"][name="selectlistcheckbox"]:checked').value;
+			var txtbox_value;
+
+
+
+			if (day_checkbox == 'First Day') {
+				txtbox_value = document.getElementById('txt1').value;
+			}
+			else if (day_checkbox == 'Second Day') {
+				txtbox_value = document.getElementById('txt2').value;
+			}
+			else if (day_checkbox == 'Third Day') {
+				txtbox_value = document.getElementById('txt3').value;
+			}
+			else if (day_checkbox == 'Fourth Day') {
+				txtbox_value = document.getElementById('txt4').value;
+			}
+			else if (day_checkbox == 'Fifth Day') {
+				txtbox_value = document.getElementById('txt5').value;
+			}
+			console.log(txtbox_value);
+
+			createTable(radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value);
+
+			return false;
+		}
+
+		function createTable(radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value) {
+			var table = document.createElement("table");
+			createHead(table);
+
+			var div = document.getElementById('table_div');
+			div.appendChild(table);
+			table.setAttribute("border", "1");
+
+			populate(table, radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value);
+			//table.setAttribute("class", "table_data");
+
+		}
+
+		function createHead(table) {
+			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Day", "Day_comments"];
+
+			var th1 = document.createElement("TH");
+
+			for (let i = 0; i < headers.length; i++) {
+				var th = document.createElement("Th");
+				var c1 = document.createTextNode(headers[i]);
+				th.appendChild(c1);
+				th1.appendChild(th);
+			}
+			table.appendChild(th1);
+		}
+
+		function populate(table, radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value) {
+
+			var data_values = [radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value];
+
+			var tr = document.createElement("TR");
+
+			for (let i = 0; i < data_values.length; i++) {
+				var td = document.createElement("TD");
+				var c2 = document.createTextNode(data_values[i]);
+				td.appendChild(c2);
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+
 	</script>
 
 </body>
