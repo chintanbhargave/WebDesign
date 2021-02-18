@@ -31,9 +31,9 @@
 			<br><br>
 			<form method="POST" onsubmit=" return checksubmit(this)">
 				<label>Title*:</label>
-				<input type="radio" name="title" id="miss" value="miss" required="required" />Miss
-				<input type="radio" name="title" id="mr" value="mr" required="required" />Mr.
-				<input type="radio" name="title" id="mrs" value="mrs" required="required" />Mrs.
+				<input type="radio" name="title" id="miss" value="Miss" required="required" />Miss
+				<input type="radio" name="title" id="mr" value="Mr" required="required" />Mr.
+				<input type="radio" name="title" id="mrs" value="Mrs" required="required" />Mrs.
 				<br><br>
 
 				<label for="firstName">First Name*:</label>
@@ -366,7 +366,7 @@
 		}
 
 		function createHead(table) {
-			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Day", "Day_comments"];
+			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Day", "Description"];
 
 			var th1 = document.createElement("TR");
 
