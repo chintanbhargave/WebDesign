@@ -368,7 +368,7 @@
 		function createHead(table) {
 			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Day", "Day_comments"];
 
-			var th1 = document.createElement("TH");
+			var th1 = document.createElement("TR");
 
 			for (let i = 0; i < headers.length; i++) {
 				var th = document.createElement("Th");
@@ -390,6 +390,7 @@
 				var c2 = document.createTextNode(data_values[i]);
 				td.appendChild(c2);
 				tr.appendChild(td);
+				//td.setAttribute("colspan", "0");
 			}
 			table.appendChild(tr);
 		}
