@@ -317,6 +317,7 @@
 		function checksubmit(data) {
 
 			//console.log("inside submit");
+			var v1 = document.getElementById("beverages").value;
 			var radio = document.querySelector('input[type="radio"]:checked').value;
 			var fname = document.getElementById('firstName').value;
 			var lname = document.getElementById('lastName').value;
@@ -327,8 +328,25 @@
 			var cmts = document.getElementById('comments').value;
 			var day_checkbox = document.querySelector('input[type="checkbox"][name="selectlistcheckbox"]:checked').value;
 			var txtbox_value;
+			var week_day;
 
+			if (v1 == "day1") {
+				week_day = "Monday";
+			}
+			else if (v1 == "day2") {
+				week_day = "Tuesday";
+			}
+			else if (v1 == "day3") {
+				week_day = "Wednesday";
+			}
+			else if (v1 == "day4") {
+				week_day = "Thursday";
+			}
+			else if (v1 == "day5") {
+				week_day = "Friday";
+			}
 
+			console.log(week_day);
 
 			if (day_checkbox == 'First Day') {
 				txtbox_value = document.getElementById('txt1').value;
@@ -345,14 +363,13 @@
 			else if (day_checkbox == 'Fifth Day') {
 				txtbox_value = document.getElementById('txt5').value;
 			}
-			console.log(txtbox_value);
 
-			createTable(radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value);
+			createTable(radio, fname, lname, mail, phn, zip, how, cmts, week_day, day_checkbox, txtbox_value);
 
 			return false;
 		}
 
-		function createTable(radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value) {
+		function createTable(radio, fname, lname, mail, phn, zip, how, cmts, week_day, day_checkbox, txtbox_value) {
 			var table = document.createElement("table");
 			createHead(table);
 
@@ -360,13 +377,13 @@
 			div.appendChild(table);
 			table.setAttribute("border", "1");
 
-			populate(table, radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value);
+			populate(table, radio, fname, lname, mail, phn, zip, how, cmts, week_day, day_checkbox, txtbox_value);
 			//table.setAttribute("class", "table_data");
 
 		}
 
 		function createHead(table) {
-			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Day", "Description"];
+			var headers = ["Title", "First Name", "Last Name", "Mail", "Phone", "Zip", "Source", "Comments", "Selected_day", "Day", "Description"];
 
 			var th1 = document.createElement("TR");
 
@@ -379,9 +396,9 @@
 			table.appendChild(th1);
 		}
 
-		function populate(table, radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value) {
+		function populate(table, radio, fname, lname, mail, phn, zip, how, cmts, week_day, day_checkbox, txtbox_value) {
 
-			var data_values = [radio, fname, lname, mail, phn, zip, how, cmts, day_checkbox, txtbox_value];
+			var data_values = [radio, fname, lname, mail, phn, zip, how, cmts, week_day, day_checkbox, txtbox_value];
 
 			var tr = document.createElement("TR");
 
